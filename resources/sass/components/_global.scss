@@ -1,0 +1,61 @@
+html {
+    @apply bg-theme-1;
+    &.dark {
+        @apply bg-dark-2;
+        body {
+            @apply text-gray-300;
+            *,
+            ::before,
+            ::after {
+                @apply border-dark-3;
+            }
+        }
+    }
+    body {
+        -webkit-font-smoothing: antialiased;
+        @apply overflow-x-hidden py-3 px-8 font-roboto text-sm text-gray-800;
+        @include media-breakpoint-down(sm) {
+            @apply px-3;
+        }
+    }
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+
+    .embed-responsive-item,
+    iframe,
+    embed,
+    object,
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+    }
+}
+
+  // tailwindcss-aspect-ratio generates these
+    .aspect-ratio-none {
+        padding-bottom: 0;
+    }
+    .aspect-ratio-square {
+        padding-bottom: 100%;
+    }
+    .aspect-ratio-16\/9 {
+        padding-bottom: 56.25%;
+    }
+    .aspect-ratio-4\/3 {
+        padding-bottom: 75%;
+    }
+    .aspect-ratio-21\/9 {
+        padding-bottom: 42.86%;
+    }
+
